@@ -1,5 +1,5 @@
 
-from __future__ import annotations      """ linha inserida pra evitar que referências circulares causem erros
+from __future__ import annotations      # linha inserida pra evitar que referências circulares causem erros
 from abc import ABC, abstractmethod   # Importa utilitários da classe ABC, neste caso, para criar a interface Transacao.
 from datetime import datetime, date
 import textwrap     # txtwrap.dedent() é um abiblioteca para formatar strings multilinha, imprimindo sem espaços desnecessários.
