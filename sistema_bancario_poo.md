@@ -1,3 +1,4 @@
+
 from __future__ import annotations      # linha inserida pra evitar que referências circulares causem erros
 from abc import ABC, abstractmethod   # Importa utilitários da classe ABC, neste caso, para criar a interface Transacao.
 from datetime import datetime, date
@@ -127,7 +128,7 @@ class ContaCorrente(Conta):
         return True
 
 
-# ---------- Transações (interface + concretas) ----------
+# ************ Transações (interface + concretas) *************
 
 class Transacao(ABC):
     def __init__(self, valor: float) -> None:
@@ -156,7 +157,7 @@ class Saque(Transacao):
             conta.historico.adicionar_transacao(self)
 
 
-# ---------- Clientes ----------
+# *********** Clientes ***********
 
 class Cliente:
     def __init__(self, endereco: str) -> None:
@@ -386,4 +387,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
